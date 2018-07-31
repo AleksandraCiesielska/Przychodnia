@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>healthy style</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Lista wszystkich lekarzy</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered table-hover table-custom">
+                <tr class="success">
+                    <th>Imie</th>
+                    <th>Nazwisko</th>
+                    <th>numer telefonu</th>
+                    <th>Specjalizacja</th>
+                    <th>Tytuł akademicki</th>
+                </tr>
+                <tr th:each="doctor : ${doctors}">
+                    <td th:text="${doctor.name}"></td>
+                    <td th:text="${doctor.lastName}"></td>
+                    <td th:text="${doctor.number}"></td>
+                    <td th:text="${doctor.specialization}"></td>
+                    <td th:text="${doctor.academic_title}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

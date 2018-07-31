@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Przychodnia Automagiczna</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="color: #CC2200;">
+	<div class="container">
+		<div id="title" class="row">
+			Przychodnia Automagiczna
+		</div>
+		<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div class="panel panel-default">
+			    <div class="panel-body">
+			    <div class="col-md-8">
+
+					<form action="index" method="post">
+						<br><br>
+					  	<b>Dodaj wizyte</b>
+					  	<br><br>
+						<div class="form-group">
+
+					    	<input type="text" class="form-control" name="" placeholder="dr. Who ? ">
+					  	</div>
+					  	<!--<div class="form-group">-->
+					    	<!--<select th:each="Patient : ${patients}">-->
+								<!--<option th:text="${Patient.name}" th:text="${Patient.lastName}"></option>-->
+							<!--</select>-->
+					  	<!--</div>-->
+					  	<div class="form-group">
+
+					    	<input type="date" class="form-control" name="data" value="2018-07-31">
+					  	</div>
+						<div class="form-group">
+
+					    	<input type="time" class="form-control" name="godzina" value="09:00">
+					  	</div>
+					  	<button type="submit" class="btn btn-default">Dodaj wizyte</button>
+					</form>
+					<a href="add.html"><h3>DODAJ PACJENTA LUB DOKTORA:</h3></a>
+			    </div>
+			    <div class="col-md-4">
+			    	<div id="aboutMe" class="row">
+			    		Dodaj wizyte
+			    		<br>
+			    		<div id="text">
+			    			<img id="image" class="img-square" src="http://www.listal.com/viewimage/15781367">
+					 		<br>
+					 		Witamy na stronie rejestracyjnej przychodni Automagicznej.
+			    		</div>
+			    	</div>
+			    	<br>
+			    </div>
+			    </div>
+			</div>
+			<div class="row">
+				<div id="footer">copyright &copy; Aleksandra Ciesielska i Adrian Lachowicz 2018</div>
+
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		</div>		
+	</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>healthy style</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="color: #CC7700;">
+<div class="container">
+    <div id="title" class="row">
+        Przychodnia Automagiczna
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-md-8">
+
+                        <form th:action="@{/addDoc}" th:object="${doctor}" method="post">
+                            <input type="hidden" th:field="*{id}"/>
+                            <br><br>
+                            <b>Dodaj lekarza</b>
+                            <br><br>
+                            <div class="form-group">
+                                <input type="text" class="form-control" th:field="${doctor.name}" placeholder="Imie:"/>
+                            </div>
+                            <div class="form-group" >
+                                <input type="text" class="form-control" th:field="${doctor.lastName}" placeholder="Nazwisko:"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" th:field="${doctor.number}" placeholder="tel."/>
+                            </div>
+                            <br>
+                            <div id="myDIV">
+                                <input type="text" class="form-control" th:field=${doctor.academic_title} placeholder="dr.">
+                                <br>
+                            </div>
+                            <div name="specialization" th:field="${doctor.specialization}">
+                                <div>
+                                    <input type="text" class="form-control" th:field=${doctor.specialization} placeholder="nazwa">
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-default">Dodaj lekarza: </button>
+                        </form>
+                        <a href="addVisit"><h3>DODAJ WIZYTE:</h3></a>    <a href="/"><h3>DODAJ UZYTKOWNIKA:</h3></a>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="aboutMe" class="row">
+                            Dodaj użytkownika
+                            <br>
+                            <div id="text">
+                                <img id="image" class="img-square" src="https://idpm.files.wordpress.com/2013/01/418829_321964561174449_296771499_n.jpg">
+                                <br>
+                                Witamy na stronie rejestracyjnej przychodni Automagicznej.
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="footer">copyright &copy; Aleksandra Ciesielska i Adrian Lachowicz 2018</div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+</body>
+</html>

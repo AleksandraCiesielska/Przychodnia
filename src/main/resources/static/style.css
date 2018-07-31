@@ -1,0 +1,44 @@
+a, a:link, a:hover, a:active, a:visited {
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	color: #CC7700;
+}
+
+#title {
+	padding: 30px;
+	font-size: 70px;
+	font-family: 'Lobster', cursive;
+	color: #CC7700;
+	text-align: center;
+}
+
+#aboutMe {
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: #CC7700;
+	border-left: 1px solid;
+	height:300px
+}
+
+#image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#text {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+}
+
+#footer {
+	text-align: center;
+}
+
+.form-group
+{
+	width: 50px;
+}
+
